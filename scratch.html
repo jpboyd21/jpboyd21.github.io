@@ -6,49 +6,60 @@
     <title>Jacob Boyd – Scratch Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="scratch.css">
+    <style>
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        hr {
+            margin: 3rem 0;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light px-4 mb-4">
-        <a class="navbar-brand" href="index.html">← Back to Main Site</a>
+        <a class="navbar-brand fw-bold" href="index.html">← Back to Main Site</a>
     </nav>
 
     <!-- Page Header -->
     <header class="py-5 text-center bg-info text-white mb-5">
         <div class="container">
-            <h1 class="display-4">Welcome to My Scratch Page</h1>
-            <p class="lead">Here’s a sandbox of my raw HTML/CSS skills, with a few extras.</p>
+            <h1 class="display-5 fw-bold">Scratch Page</h1>
+            <p class="lead mb-0">A sandbox of raw HTML, CSS, and integrated tools.</p>
         </div>
     </header>
 
     <div class="container mb-5">
 
-        <!-- Workflow Boxes -->
-<div class="row mb-4 text-center">
-    <div class="col-md-4">
-        <div class="box red">
-            <h4>⚙️ Systems</h4>
-            <p>I build repeatable processes for everything — tasks, habits, workflows. Tools like Notion and Google Calendar are my command center.</p>
+        <!-- Boxes -->
+        <h2 class="text-center">🚀 Core Workflow Pillars</h2>
+        <div class="row mb-4 text-center">
+            <div class="col-md-4">
+                <div class="box red">
+                    <h4>⚙️ Systems</h4>
+                    <p>I build repeatable processes for tasks, habits, and projects. Notion + Google Calendar are my HQ.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box blue">
+                    <h4>🤖 Automation</h4>
+                    <p>If it can be automated, I’ll do it. Manus AI, Python scripts, and a dash of wizardry.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box green">
+                    <h4>✍️ Reflection</h4>
+                    <p>Writing helps me clarify, document, and recalibrate. Digital journaling is part of my weekly rhythm.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="box blue">
-            <h4>🤖 Automation</h4>
-            <p>If it can be automated, I’ll find a way. From Manus AI bots to Python scripts, I eliminate friction with code.</p>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="box green">
-            <h4>✍️ Reflection</h4>
-            <p>Writing helps me think clearly and grow intentionally. Whether it’s journaling or long-form essays, I document the journey.</p>
-        </div>
-    </div>
-</div>
 
+        <hr>
 
         <!-- Embedded List -->
-        <h2>🛠 Productivity Stack</h2>
+        <h2>🧰 Productivity Stack</h2>
         <ol>
             <li>Daily Tools
                 <ul>
@@ -65,8 +76,7 @@
             </li>
         </ol>
 
-        <!-- Anchor Link -->
-        <p><a href="#bottom">Jump to the bottom</a></p>
+        <hr>
 
         <!-- Image -->
         <h2>🤖 Favorite AI Tool</h2>
@@ -74,18 +84,18 @@
         <p>Manus AI helps me build and automate tools like this page — it’s become an essential part of how I get stuff done.</p>
 
         <!-- YouTube Embed -->
-        <h2 class="mt-5">🎥 Video That Inspires Me</h2>
+        <h2>🎥 Favorite Inspo Video</h2>
         <div class="ratio ratio-16x9 mb-4">
             <iframe src="https://www.youtube.com/embed/zMfhFKLwsdU" title="Manus AI" allowfullscreen></iframe>
         </div>
 
+        <hr>
+
         <!-- Tableau Graph -->
-        <h2 class="mt-5">📊 Live Tableau Graph</h2>
+        <h2>📊 Live Tableau Graph</h2>
         <div class='tableauPlaceholder' id='viz1745196070853' style='position: relative'>
             <noscript>
-                <a href='#'>
-                    <img alt='World Literacy Rates Overview' src='https://public.tableau.com/static/images/Li/LiteracyRates_17243394670400/WorldLiteracyRatesOverview/1_rss.png' style='border: none' />
-                </a>
+                <a href='#'><img alt='World Literacy Rates Overview' src='https://public.tableau.com/static/images/Li/LiteracyRates_17243394670400/WorldLiteracyRatesOverview/1_rss.png' style='border: none' /></a>
             </noscript>
             <object class='tableauViz' style='display:none;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
@@ -103,11 +113,9 @@
                 <param name='language' value='en-US' />
             </object>
         </div>
-
         <script type='text/javascript'>
             var divElement = document.getElementById('viz1745196070853');
             var vizElement = divElement.getElementsByTagName('object')[0];
-
             if (divElement.offsetWidth > 800) {
                 vizElement.style.width = '100%';
                 vizElement.style.height = '800px';
@@ -118,18 +126,21 @@
                 vizElement.style.width = '100%';
                 vizElement.style.height = '2827px';
             }
-
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
 
+        <hr>
+
         <!-- Web App -->
-        <h2 class="mt-5">🎮 Try My Web App</h2>
+        <h2>🎮 AI Mood Match</h2>
         <p>Feeling something? <a href="myapp.html" target="_blank">Play AI Mood Match →</a></p>
 
-        <!-- Bottom -->
-        <p id="bottom" class="mt-5">⬇️ You made it to the bottom!</p>
+        <hr>
+
+        <!-- Bottom Anchor -->
+        <p id="bottom" class="mt-5 text-center">⬇️ You made it to the bottom. Congrats, pilgrim.</p>
 
     </div>
 
