@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Mood Match</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .emoji-button {
+      font-size: 2.5rem;
+      margin: 10px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffffff;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .emoji-button:hover {
+      transform: scale(1.15);
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    a {
+      display: block;
+      margin-top: 40px;
+      color: #00796b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 AI Mood Match</h1>
+  <p>Pick the emoji that fits your mood. I’ll tell you why you feel that way (probably).</p>
+
+  <div id="moods">
+    <button class="emoji-button" onclick="guessMood('😄')">😄</button>
+    <button class="emoji-button" onclick="guessMood('😢')">😢</button>
+    <button class="emoji-button" onclick="guessMood('😠')">😠</button>
+    <button class="emoji-button" onclick="guessMood('😴')">😴</button>
+    <button class="emoji-button" onclick="guessMood('🤔')">🤔</button>
+    <button class="emoji-button" onclick="guessMood('😎')">😎</button>
+  </div>
+
+  <div id="result"></div>
+
+  <a href="scratch.html">← Back to Scratch Page</a>
+
+  <script>
+    const moodInsights = {
+      '😄': [
+        "You just got something off your to-do list and you're vibing.",
+        "Sunlight, a good playlist, and zero homework? No wonder you're glowing.",
+        "You're proud of yourself today — and you should be."
+      ],
+      '😢': [
+        "You miss something (or someone) but can’t say it out loud.",
+        "You’ve been holding it together like a champ… but it’s heavy.",
+        "Maybe it’s just one of those days. Feel it. Let it pass."
+      ],
+      '😠': [
+        "Someone pushed a boundary. Respectfully, you’re done.",
+        "You’ve been bottling up too much. That lid just popped.",
+        "You’re tired of being underestimated. Let it fuel you."
+      ],
+      '😴': [
+        "3 AM thoughts finally caught up to you.",
+        "You’ve been grinding too hard. Rest is productive too.",
+        "Your body’s working overtime. Treat it like it matters."
+      ],
+      '🤔': [
+        "You're overthinking again... or maybe thinking *just* enough.",
+        "You’re processing something big. Clarity is coming.",
+        "You’ve got questions. That means you’re growing."
+      ],
+      '😎': [
+        "You’ve locked into your groove and it shows.",
+        "Confidence looks good on you — even better when earned.",
+        "The work’s not done, but you know you’re on the right path."
+      ]
+    };
+
+    function guessMood(emoji) {
+      const options = moodInsights[emoji];
+      const randomIndex = Math.floor(Math.random() * options.length);
+      const message = options[randomIndex];
+      document.getElementById("result").innerText = `"${message}"`;
+    }
+  </script>
+
+</body>
+</html>
